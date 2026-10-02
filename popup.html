@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="top">
+    <label class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+      <input id="search" type="search" placeholder="Search saved videos" autocomplete="off" spellcheck="false">
+      <span class="kbd" aria-hidden="true">/</span>
+    </label>
+  </div>
+
+  <ul id="list"></ul>
+
+  <div id="empty" class="empty" hidden>
+    <div class="e-track"></div>
+    <div class="e-title"></div>
+    <p class="e-text"></p>
+  </div>
+
+  <footer>
+    <div class="site-row">
+      <div class="site">
+        <div class="label" id="siteLabel">Tracking this site</div>
+        <span class="host" id="siteHost"></span>
+      </div>
+      <button class="switch" id="siteSwitch" role="switch" aria-checked="true" aria-labelledby="siteLabel"></button>
+      <button class="icon-btn" id="gear" aria-label="Settings" aria-expanded="false" aria-controls="panel">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg>
+      </button>
+    </div>
+    <div class="panel" id="panel">
+      <div class="panel-inner">
+        <div class="panel-body">
+          <div class="opt">
+            <span id="askLabel">Ask before resuming</span>
+            <button class="switch" id="askSwitch" role="switch" aria-checked="true" aria-labelledby="askLabel"></button>
+          </div>
+          <button class="danger" id="clear">Clear all history</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
